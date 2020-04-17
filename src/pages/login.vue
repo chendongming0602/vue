@@ -26,6 +26,9 @@ export default {
 }
 </script>
 
-<style  scoped>
-
+<style  lang="scss" type="text/css" >
+    $color:#f0f;
+    div{
+        color: $color;
+    }
 </style>
