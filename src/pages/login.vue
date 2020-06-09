@@ -1,6 +1,6 @@
 <template>
     <div class="loginTop">
-        我是登录页面
+       我是登录
     </div>
     
 </template>
@@ -27,8 +27,9 @@ export default {
 </script>
 
 <style  lang="scss" type="text/css" >
-    $color:#f0f;
+ 
     div{
         color: $color;
     }
+
 </style>
