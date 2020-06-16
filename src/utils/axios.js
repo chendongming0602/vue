@@ -61,7 +61,7 @@ const axios=function({path,method="GET",data={}}={}){
             }else{
                 reject(res.data)
             }
-        })
+        }).catch(err=>{reject(err)})
     })
 };
 // let adminEvents=()=>{//判断是否为高级会员
