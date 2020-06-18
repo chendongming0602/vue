@@ -11,7 +11,8 @@ import 'element-ui/lib/theme-chalk/index.css';
 //Vue.prototype.bus=bus;//项目小-使用公用js（兄弟传值）
 //Vue.use(MintUI)//3.将mint-ul组件注册vue实例中
 Vue.use(ElementUI)//注册element-ui
-
+//rem转px
+import "@/utils/flex";
 
 // import jq from './assets/jquery-1.11.3.js'
 

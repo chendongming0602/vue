@@ -7,7 +7,17 @@ module.exports = {
 				data: `@import "@/assets/css/all.scss";`
 			}
 		}
-	}
+	},
+	//代理跨域
+    devServer:{ 
+        "proxy":{
+            "/api":{
+                target:"http://127.0.0.1:3000",
+                pathRewrite:{"^/api":""}
+            }
+        }
+    },
+  	productionSourceMap: false//隐藏代码
 }
 // const path = require('path')
 // module.exports = {

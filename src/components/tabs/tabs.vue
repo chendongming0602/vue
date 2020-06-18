@@ -9,6 +9,16 @@
     </div>
 </template>
 <script>
+/*
+    ///////////////////////////父组件使用说明////////////////////////////////////////
+    <Tabs @tabs="tabsEvent" :index="index"></Tabs>
+    //事件
+    tabsEvent(i){
+        let {index}=i;
+        if(index===this.index) return;
+        this.index=index;
+    }
+*/
 export default {
     name:"tabs",
     props:{
