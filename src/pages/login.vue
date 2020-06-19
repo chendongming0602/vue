@@ -1,5 +1,5 @@
 <template>
-    <div class="loginTop">
+    <div class="loginTop" @click="login">
        我是登录
     </div>
     
@@ -19,8 +19,9 @@ export default {
     },
     methods:{
         login(){
-            
-        }
+
+        },
+      
     },
    
 }
