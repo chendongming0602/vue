@@ -19,5 +19,7 @@ module.exports = {
     },
     //关闭严格模式eslint
     lintOnSave: false,
-  	productionSourceMap: false//隐藏代码
+    productionSourceMap: false,//隐藏代码
+    //将打包路径改成相对路径  版本差异：publicPaht:'./'  当前页面下的pages：./\./pages/
+	baseUrl : '/'
 }
