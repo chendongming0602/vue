@@ -1,15 +1,18 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
+import {GET_TOKEN} from "./type"
+import user from "./modules/user";
 Vue.use(Vuex);
 const state={//要设置的全局访问的state对象
     userInfo:{},//用户信息
-    token:""
+    token:"我的啊"
 };
 const getters={//读取值(this.$store.getters.isList)
     info(state){
         return state.userInfo
     },
     getToken(state){
+      
         return state.token
     }
 };
@@ -18,22 +21,29 @@ const mutations={//同步修改值(this.$store.commit("changeList",this.list2);)
         state.userInfo=value
     },
     tokenMuta(state,value){
-        state.token=value
+            console.log("修改了",this.getters[GET_TOKEN])
+            state.token=value
+       
+       
     }
 }
 const actions={//异步修改值(this.$store.dispatch('actionChange',this.list3))
     userInfoChange(context,value){
         context.commit("userInfo",value)
     },
-    tokenChange(context,value){
-        context.commit("tokenMuta",value)
+    tokenChange({commit},value){
+        
+        commit("tokenMuta",value)
     }
 }
 const store = new Vuex.Store({
       state,
       getters,
       mutations,
-      actions
+      actions,
+      modules:{
+          user
+      }
    });
 
 export default store;

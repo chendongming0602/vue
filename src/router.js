@@ -44,22 +44,8 @@ const router=new Router({
 //         next('route') //跳转指定路由
 //         next('error') //跳转错误路由
   router.beforeEach((to,from,next)=>{
-    try{
-      //设置标题
-      if (to.meta.title) {
-        document.title = to.meta.title;
-      }
-    }catch(err){}
-    next()
-    // console.log(sessionStorage["token"])
-    // let sessionToken=JSON.parse(sessionStorage.getItem("store"))||'',storeToken=store.getters.getToken;
-    // if(to.meta.is===true){//需要判断是否登录
-    //   if(!storeToken&&!sessionToken.token) return next('/');//缓存和vuex都空(跳登录)
-    //   next();
-    // } else{
-    //   if(storeToken) return next(false);//已经登录不给回去
-    //   next();
-    // }
+
+    next();
     
   })
  export default router;
