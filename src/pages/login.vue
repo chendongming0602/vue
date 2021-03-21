@@ -30,8 +30,4 @@ export default {
 
 <style  lang="scss" type="text/css" >
  
-    div{
-        color: $color;
-    }
-
 </style>
